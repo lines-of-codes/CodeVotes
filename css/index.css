@@ -1,3 +1,17 @@
 body {
 	font-family: Poppins, sans-serif;
+	background-color: rgb(196, 255, 250);
+}
+
+div {
+	font-family: Poppins, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
 }
