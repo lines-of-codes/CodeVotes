@@ -1,3 +1,50 @@
 body {
 	font-family: Poppins, sans-serif;
+	--background: white;
+	--darker-background: whitesmoke;
+	--darker-background-hover: lightgray;
+	--font-color: black;
+	background: var(--background);
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--darker-background);
+	padding: 15px 0;
+}
+
+nav #logo {
+	padding-right: 30px;
+	font-weight: bold;
+}
+
+nav .elements a {
+	width: 100%;
+	padding: 15px 20px;
+	text-decoration: none;
+	color: var(--font-color);
+	transition: 250ms;
+}
+
+nav .elements a:hover {
+	background: var(--darker-background-hover);
+}
+
+footer {
+	background: var(--darker-background);
+	text-align: center;
+	padding: 15px 0;
+}
+
+#about {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+.container {
+	margin: 10px;
 }

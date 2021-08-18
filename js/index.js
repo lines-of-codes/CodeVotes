@@ -13,4 +13,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-m.render(document.getElementsByTagName("main")[0], m("h1", {style: "text-align: center;"}, "Hello world!"));
+m.render(
+	document.getElementById("codes"),
+	m("h1", {style: "text-align: center;"}, "Hello world!")
+);
