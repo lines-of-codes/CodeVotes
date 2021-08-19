@@ -19,6 +19,7 @@ nav {
 nav #logo {
 	padding-right: 30px;
 	font-weight: bold;
+	font-size: large;
 }
 
 nav .elements a {
