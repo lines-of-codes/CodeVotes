@@ -82,7 +82,7 @@ footer {
 
 #userActionMenu {
 	position: fixed;
-	right: 2.5vw;
+	right: 35px;
 	background: var(--darker-background);
 	border: 1px solid var(--font-color);
 	border-radius: 5px;
@@ -124,4 +124,10 @@ footer {
 	background: var(--background);
 	color: var(--font-color);
 	font-family: Poppins, sans-serif;
+}
+
+@media only screen and (max-width: 495px) {
+	nav #logo {
+		display: none;
+	}
 }
