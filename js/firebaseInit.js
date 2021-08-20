@@ -23,8 +23,9 @@ function toggleUserActionMenu() {
 	}
 }
 firebase.auth().onAuthStateChanged((user) => {
-	let currentHTML = document.getElementById("navbarelements")?.innerHTML;
-	if (currentHTML && user) {
-		document.getElementById("navbarelements").innerHTML = `<a href=\"#\">Home</a><a href=\"codes.html\">Codes</a><button onclick="toggleUserActionMenu()">${user.displayName} <i class="fas fa-chevron-down"></i></a>`;
+	let element = document.getElementById("navbarelements");
+	if (element && user) {
+		element.innerHTML = `<a href=\"#\">Home</a><a href=\"codes.html\">Codes</a><button onclick="toggleUserActionMenu()">${user.displayName} <i class="fas fa-chevron-down"></i></a>`;
+		document.getElementById("logo").style.marginTop = "15px";
 	}
 })

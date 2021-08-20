@@ -5,6 +5,7 @@ body {
 	--darker-background-hover: lightgray;
 	--font-color: black;
 	background: var(--background);
+	color: var(--font-color);
 	margin: 0;
 }
 
@@ -12,9 +13,6 @@ nav {
 	position: fixed;
 	width: 100vw;
 	top: 0%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background: var(--darker-background);
 	padding: 15px 0;
 }
@@ -23,6 +21,15 @@ nav #logo {
 	padding-right: 30px;
 	font-weight: bold;
 	font-size: large;
+	color: var(--font-color);
+	float: left;
+	margin-left: 30px;
+	margin-top: unset;
+}
+
+nav .elements {
+	float: right;
+	margin-right: 15px;
 }
 
 nav .elements a {
@@ -41,6 +48,7 @@ nav .elements button {
 	border-radius: 0px;
 	height: 53px;
 	transition: 250ms;
+	color: var(--font-color);
 }
 
 nav .elements a:hover {
@@ -58,7 +66,7 @@ footer {
 }
 
 #about {
-	border: 1px solid black;
+	border: 1px solid var(--font-color);
 	border-radius: 10px;
 	margin: 20px;
 	text-align: center;
@@ -74,16 +82,19 @@ footer {
 
 #userActionMenu {
 	position: fixed;
-	left: 60vw;
+	right: 2.5vw;
 	background: var(--darker-background);
-	border: 1px solid black;
+	border: 1px solid var(--font-color);
 	border-radius: 5px;
 	top: 83px;
-	display: none;
+	transition: 250ms;
+	opacity: 0;
+	transform: translateY(10vh);
 }
 
 #userActionMenu.active {
-	display: block;
+	opacity: 1;
+	transform: translateY(0);
 }
 
 #userActionMenu ul {
@@ -105,4 +116,12 @@ footer {
 
 #userActionMenu ul li a:hover {
 	background: var(--darker-background-hover);
+}
+
+#themeChooser {
+	padding: 2.5px 5px;
+	border-radius: 5px;
+	background: var(--background);
+	color: var(--font-color);
+	font-family: Poppins, sans-serif;
 }

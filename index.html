@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <script defer type="text/javascript" src="js/themeManager.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -43,7 +44,7 @@
             <a href="login.html">Login/Register</a>
         </div>
     </nav>
-    <div id="userActionMenu" class="">
+    <div id="userActionMenu" class>
         <ul>
             <li><a href="#"><i class="fas fa-user-tie"></i> Profile</a></li>
             <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
@@ -62,6 +63,13 @@
         </section>
     </main>
     <footer>
+        <div id="themeChanger">
+            Theme: <select id="themeChooser" title="The theme of the site">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="solarized">Solarized</option>
+            </select>
+        </div>
         Made with love from CodeInBytes
     </footer>
 </body>
