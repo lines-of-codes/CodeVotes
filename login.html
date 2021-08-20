@@ -3,6 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script defer type="text/javascript" src="js/firebaseInit.js"></script>
+    <script defer type="text/javascript" src="js/login.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="css/index.css">
+
     <!-- Primary Meta Tags -->
 	<title>CodeVotes - Login</title>
     <meta name="title" content="CodeVotes - Home">
@@ -23,11 +33,14 @@
 <body>
     <nav>
         <div id="logo">CodeVotes</div>
-        <div class="elements">
-            <a href="index.html">Home</a>
-            <a href="codes.html">Codes</a>
-            <a href="#">Login/Register</a>
+        <div class="elements" id="navbarelements">
+            <a href="#">Home</a>
+            <a href="login.html">Login/Register</a>
         </div>
-    </nav>
+    </nav><br>
+    <div class="container" style="margin: 20px;">
+        <h1>Login or Register</h1>
+        <div id="firebaseui-auth-container"></div>
+    </div>
 </body>
 </html>

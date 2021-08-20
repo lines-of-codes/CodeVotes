@@ -9,6 +9,9 @@ body {
 }
 
 nav {
+	position: fixed;
+	width: 100vw;
+	top: 0%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -30,7 +33,21 @@ nav .elements a {
 	transition: 250ms;
 }
 
+nav .elements button {
+	font-family: Poppins, sans-serif;
+	background: none;
+	border: none;
+	font-size: unset;
+	border-radius: 0px;
+	height: 53px;
+	transition: 250ms;
+}
+
 nav .elements a:hover {
+	background: var(--darker-background-hover);
+}
+
+nav .elements button:hover {
 	background: var(--darker-background-hover);
 }
 
@@ -53,4 +70,39 @@ footer {
 
 footer {
 	text-align: center;
+}
+
+#userActionMenu {
+	position: fixed;
+	left: 60vw;
+	background: var(--darker-background);
+	border: 1px solid black;
+	border-radius: 5px;
+	top: 83px;
+	display: none;
+}
+
+#userActionMenu.active {
+	display: block;
+}
+
+#userActionMenu ul {
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
+}
+
+#userActionMenu ul li {
+	list-style: none;
+	display: block;
+	line-height: 35px;
+}
+
+#userActionMenu ul li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	color: var(--font-color);
+}
+
+#userActionMenu ul li a:hover {
+	background: var(--darker-background-hover);
 }

@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script defer src="https://kit.fontawesome.com/f904e3cc38.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/mithril/mithril.js"></script>
+    <script defer type="text/javascript" src="js/firebaseInit.js"></script>
     <script defer type="text/javascript" src="js/index.js"></script>
     
     <!-- Primary Meta Tags -->
@@ -37,17 +38,23 @@
 <body>
     <nav>
         <div id="logo">CodeVotes</div>
-        <div class="elements">
+        <div class="elements" id="navbarelements">
             <a href="#">Home</a>
-            <a href="codes.html">Codes</a>
             <a href="login.html">Login/Register</a>
         </div>
     </nav>
+    <div id="userActionMenu" class="">
+        <ul>
+            <li><a href="#"><i class="fas fa-user-tie"></i> Profile</a></li>
+            <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+    <br><br><br>
     <main>
         <div id="about">
             <div class="container">
-                <h2>About</h2>
-                <p>A place where you can vote for code challenges. That's about it.</p>
+                <h2>CodeVotes</h2>
+                <p>A place where you can vote for code!</p>
             </div>
         </div>
         <section id="codes">
@@ -55,7 +62,7 @@
         </section>
     </main>
     <footer>
-        Made with love from [Placeholder, yes will replace this later]
+        Made with love from CodeInBytes
     </footer>
 </body>
 
