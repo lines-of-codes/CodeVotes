@@ -16,7 +16,7 @@ var CodeView = {
                     m("a", { href: "#!/home", style: "color: var(--font-color);" }, "Go back home")
                 ]);
             }
-        })["catch"](function (error) {
+        }).catch(function (error) {
             return m("div", { id: "app" }, [
                 m("h1", { style: "text-align: center;" }, "Something went wrong..."),
                 m("p", { style: "text-align: center;" }, "Error: " + error),
@@ -29,7 +29,7 @@ var Home = {
     view: function () {
         return m("div", { id: "app" }, [
             m("div", { id: "about" }, [
-                m("div", { "class": "container" }, [
+                m("div", { class: "container" }, [
                     m("h2", "CodeVotes"),
                     m("p", "A place where you can vote for code!")
                 ])
@@ -42,5 +42,6 @@ var Home = {
 };
 m.route(document.getElementById("root"), "/home", {
     "/home": Home,
-    "/codes/:codeid": CodeView
+    "/codes/:codeid": CodeView,
+    // "/submit": SubmitCode
 });
