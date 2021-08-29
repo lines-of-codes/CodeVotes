@@ -4,14 +4,14 @@ themeChooser.addEventListener("change", function() {
 })
 
 // Load saved theme (if exist)
-let savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("theme");
 if(savedTheme) {
 	setColorTheme(savedTheme);
 	themeChooser.value = savedTheme;
 }
 
 
-function setColorTheme(theme) {
+function setColorTheme(theme: string) {
 	if(theme === "light") {
 		localStorage.setItem("theme", "light");
 		document.body.style.setProperty("--background", "white");
