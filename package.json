@@ -1,21 +1,21 @@
 {
   "name": "codevotes",
-  "version": "1.0.0",
-  "description": "CodeVotes, an Application that you can vote code.",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "parcel index.html codes.html login.html logout.html"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeInBytesChallenges/codeinbyteschallenges.github.io.git"
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "keywords": [
-    "code"
-  ],
-  "author": "CodeInBytes",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CodeInBytesChallenges/codeinbyteschallenges.github.io/issues"
-  },
-  "homepage": "https://github.com/CodeInBytesChallenges/codeinbyteschallenges.github.io#readme"
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
 }

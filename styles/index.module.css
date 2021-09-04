@@ -1,15 +1,4 @@
-body {
-	font-family: Poppins, sans-serif;
-	--background: white;
-	--darker-background: whitesmoke;
-	--darker-background-hover: lightgray;
-	--font-color: black;
-	background: var(--background);
-	color: var(--font-color);
-	margin: 0;
-}
-
-nav {
+.nav {
 	position: fixed;
 	width: 100vw;
 	top: 0%;
@@ -17,7 +6,7 @@ nav {
 	padding: 15px 0;
 }
 
-nav #logo {
+.nav #logo {
 	padding-right: 30px;
 	font-weight: bold;
 	font-size: large;
@@ -27,12 +16,12 @@ nav #logo {
 	margin-top: unset;
 }
 
-nav .elements {
+.nav .elements {
 	float: right;
 	margin-right: 15px;
 }
 
-nav .elements a {
+.nav .elements a {
 	width: 100%;
 	padding: 15px 20px;
 	text-decoration: none;
@@ -40,7 +29,7 @@ nav .elements a {
 	transition: 250ms;
 }
 
-nav .elements button {
+.nav .elements button {
 	font-family: Poppins, sans-serif;
 	background: none;
 	border: none;
@@ -51,15 +40,15 @@ nav .elements button {
 	color: var(--font-color);
 }
 
-nav .elements a:hover {
+.nav .elements a:hover {
 	background: var(--darker-background-hover);
 }
 
-nav .elements button:hover {
+.nav .elements button:hover {
 	background: var(--darker-background-hover);
 }
 
-footer {
+.footer {
 	background: var(--darker-background);
 	text-align: center;
 	padding: 15px 0;
@@ -73,11 +62,7 @@ footer {
 }
 
 .container {
-	margin: 10px;
-}
-
-footer {
-	text-align: center;
+	margin: 25px;
 }
 
 #userActionMenu {
@@ -127,7 +112,7 @@ footer {
 }
 
 @media only screen and (max-width: 495px) {
-	nav #logo {
+	.nav #logo {
 		display: none;
 	}
 }

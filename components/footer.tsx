@@ -1,15 +1,5 @@
-let themeChooser = document.getElementById("themeChooser") as HTMLInputElement;
-themeChooser.addEventListener("change", function() {
-	setColorTheme(themeChooser.value);
-})
-
-// Load saved theme (if exist)
-const savedTheme = localStorage.getItem("theme");
-if(savedTheme) {
-	setColorTheme(savedTheme);
-	themeChooser.value = savedTheme;
-}
-
+import styles from '../styles/index.module.css'
+import { useRef } from 'react'
 
 function setColorTheme(theme: string) {
 	switch(theme) {
@@ -38,4 +28,36 @@ function setColorTheme(theme: string) {
 		console.error("Invalid theme value!");
 		break;
 	}
+}
+
+export default function Footer() {
+	const colorTheme = localStorage.getItem("theme");
+	const defaultThemeSelection = colorTheme ?? "light";
+	if(colorTheme) {
+		setColorTheme(colorTheme);
+	}
+
+	function handleChange(event) {
+		setColorTheme(event.target.value);
+	}
+
+	function createOption(value, text) {
+		if (value == defaultThemeSelection) {
+			return <option value={value} selected>{text}</option>;
+		}
+		return <option value={value}>{text}</option>;
+	}
+
+	return (
+		<footer className={styles.footer}>
+			<div id={styles.themeChanger}>
+				Theme: <select onChange={handleChange} id={styles.themeChooser} title="The theme of the site">
+					{createOption("light", "Light")}
+					{createOption("dark", "Dark")}
+					{createOption("solarized", "Solarized")}
+				</select>
+			</div>
+			Made with love from CodeInBytes
+		</footer>
+	);
 }
