@@ -1,2 +1,2 @@
-# codeinbyteschallenges.github.io
-Website for the CodeInBytes Discord server.
+# CodeVotes
+a place where you can choose to vote code!
