@@ -1,7 +1,4 @@
-import styles from '../styles/index.module.css'
-import { useRef } from 'react'
-
-function setColorTheme(theme: string) {
+function setColorTheme(theme) {
 	switch(theme) {
 	case "light":
 		localStorage.setItem("theme", "light");
@@ -32,32 +29,25 @@ function setColorTheme(theme: string) {
 
 export default function Footer() {
 	const colorTheme = localStorage.getItem("theme");
-	const defaultThemeSelection = colorTheme ?? "light";
-	if(colorTheme) {
-		setColorTheme(colorTheme);
-	}
+    const defaultThemeSelection = colorTheme ?? "light";
+    if(colorTheme) {
+        setColorTheme(colorTheme);
+    }
 
 	function handleChange(event) {
 		setColorTheme(event.target.value);
 	}
 
-	function createOption(value, text) {
-		if (value == defaultThemeSelection) {
-			return <option value={value} selected>{text}</option>;
-		}
-		return <option value={value}>{text}</option>;
-	}
-
 	return (
-		<footer className={styles.footer}>
-			<div id={styles.themeChanger}>
-				Theme: <select onChange={handleChange} id={styles.themeChooser} title="The theme of the site">
-					{createOption("light", "Light")}
-					{createOption("dark", "Dark")}
-					{createOption("solarized", "Solarized")}
+		<footer className="footer">
+			<div id="themeChanger">
+				Theme: <select defaultValue={defaultThemeSelection} onChange={handleChange} id="themeChooser" title="The theme of the site">
+					<option value="light">Light</option>
+					<option value="dark">Dark</option>
+					<option value="solarized">Solarized</option>
 				</select>
 			</div>
-			Made with love from CodeInBytes
+			Made with love from lines-of-codes
 		</footer>
 	);
 }

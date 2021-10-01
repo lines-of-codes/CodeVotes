@@ -111,6 +111,64 @@
 	font-family: Poppins, sans-serif;
 }
 
+input, .btn1 {
+	border: 1px solid var(--font-color);
+	border-radius: 5px;
+	background: var(--darker-background);
+	color: var(--font-color);
+	font-family: var(--font);
+	padding: 5px 10px;
+	margin: 5px 5px;
+	transform: scale(1, 1);
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.loginservicebtn {
+	border: 1px solid var(--font-color);
+	border-radius: 5px;
+	background: var(--darker-background);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	color: var(--font-color);
+	font-family: var(--font);
+	padding: 5px 10px;
+	margin: 5px 5px;
+	transform: scale(1, 1);
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.btn1:hover, .loginservicebtn:hover {
+	transform: scale(1.05, 1.05);
+}
+
+#btngoogle {
+	/* background: white; */
+	background-image: url("./img/btn_google_signin_light_normal.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 191px;
+	height: 46px;
+	border: none;
+	color: black;
+}
+
+#btngoogle:focus {
+	background-image: url("./img/btn_google_signin_light_focus.png");
+}
+
+#btngithub {
+	background: #211F1F;
+	color: white;
+}
+
+.centered-column-flexbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 @media only screen and (max-width: 495px) {
 	.nav #logo {
 		display: none;
