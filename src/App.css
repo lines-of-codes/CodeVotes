@@ -111,7 +111,17 @@
 	font-family: Poppins, sans-serif;
 }
 
-input, .btn1 {
+input {
+	border: 1px solid var(--font-color);
+	border-radius: 5px;
+	background: var(--darker-background);
+	color: var(--font-color);
+	font-family: var(--font);
+	padding: 5px 10px;
+	margin: 5px 5px;
+}
+
+.btn1 {
 	border: 1px solid var(--font-color);
 	border-radius: 5px;
 	background: var(--darker-background);
@@ -143,7 +153,6 @@ input, .btn1 {
 }
 
 #btngoogle {
-	/* background: white; */
 	background-image: url("./img/btn_google_signin_light_normal.png");
 	background-size: cover;
 	background-repeat: no-repeat;
